@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AudioParam version="1.0">
+  <ParamTree>
+    <!-- (дерево параметров оставляем без изменений) -->
+    <Param path="RCV" param_id="0"/>
+    <Param path="HAC" param_id="1"/>
+    <Param path="SPK" param_id="3"/>
+    <Param path="NB,RCV,GSM" param_id="160"/>
+    <Param path="WB,RCV,GSM" param_id="164"/>
+    <Param path="NB,SPK,GSM" param_id="57"/>
+    <Param path="SWB,SPK,GSM" param_id="159"/>
+  </ParamTree>
+  <ParamUnitPool>
+    <!-- RCV: Последние 3 деления уходят в "минус" для сверх-усиления -->
+    <ParamUnit param_id="0">
+      <Param name="dl_gain" value="40,32,25,18,12,8,5,2,1,0,0,-4,-8,-12,-16"/>
+      <Param name="ul_gain" value="23"/>
+      <Param name="stf_gain" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="1">
+      <Param name="dl_gain" value="40,32,25,18,12,8,5,2,1,0,0,-4,-8,-12,-16"/>
+      <Param name="ul_gain" value="0"/>
+      <Param name="stf_gain" value="0"/>
+    </ParamUnit>
+    <!-- SPK: Громкая связь с агрессивным бустом в конце -->
+    <ParamUnit param_id="3">
+      <Param name="dl_gain" value="40,32,25,18,12,8,5,2,1,0,0,-5,-10,-15,-20"/>
+      <Param name="ul_gain" value="27"/>
+      <Param name="stf_gain" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="160">
+      <Param name="dl_gain" value="40,32,24,16,10,6,3,1,0,0,-4,-8,-12,-14,-16"/>
+      <Param name="ul_gain" value="21"/>
+      <Param name="stf_gain" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="164">
+      <Param name="dl_gain" value="40,32,24,16,10,6,3,1,0,0,-4,-8,-12,-14,-16"/>
+      <Param name="ul_gain" value="19"/>
+      <Param name="stf_gain" value="0"/>
+    </ParamUnit>
+    <ParamUnit param_id="57">
+      <Param name="dl_gain" value="40,32,24,16,10,6,3,1,0,0,-5,-10,-15,-18,-20"/>
+      <Param name="ul_gain" value="24"/>
+      <Param name="stf_gain" value="0"/>
+    </ParamUnit>
+  </ParamUnitPool>
+</AudioParam>
