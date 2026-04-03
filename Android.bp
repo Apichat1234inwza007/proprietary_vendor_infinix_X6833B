@@ -2031,11 +2031,11 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/hw/audio.primary.mediatek.so",
             ],
             shared_libs: [
-                "libhidlbase-v32",
+                "libhidlbase",
                 "vendor.mediatek.hardware.mtkpower@1.0",
                 "liblog",
                 "libcutils",
-                "libutils-v32",
+                "libutils",
                 "libalsautils-v31",
                 "libhardware_legacy",
                 "libhardware",
@@ -10768,6 +10768,60 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    name: "libDefaultFpsActor",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libDefaultFpsActor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libFrameRecord",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libFrameRecord.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libJpgEncPipe",
     owner: "infinix",
     strip: {
@@ -10838,6 +10892,33 @@ cc_prebuilt_library_shared {
             ],
             shared_libs: [
                 "liblog",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libNoFpsActor",
+    owner: "infinix",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libNoFpsActor.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libutils",
+                "liblog",
+                "libc++",
                 "libc",
                 "libm",
                 "libdl",
@@ -30005,6 +30086,7 @@ cc_prebuilt_library_shared {
                 "proprietary/system_ext/lib64/libarmnn_ndk.mtk.so",
             ],
             shared_libs: [
+                "liblog",
                 "libcmdl_ndk.mtk",
                 "libdl",
                 "libm",

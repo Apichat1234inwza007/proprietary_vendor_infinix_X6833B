@@ -777,9 +777,12 @@ PRODUCT_PACKAGES += \
     libCamera_pbroov64b40mipiraw_Video_EIS \
     libCamera_pbroov64b40mipiraw_Video_Zoom1 \
     libCamera_pbroov64b40mipiraw_Video_Zoom2 \
+    libDefaultFpsActor \
+    libFrameRecord \
     libJpgEncPipe \
     libMcClient \
     libMtkSpeechEnh \
+    libNoFpsActor \
     libOpenCL \
     libSQLiteModule_VER_ALL \
     libTranExtImgThread \
